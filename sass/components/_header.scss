@@ -1,0 +1,19 @@
+.header {  
+  border-bottom: 1px solid var(--border-bottom-header);
+ 
+  &__block {  
+    display: flex;
+    align-items: center;      
+    
+      @media screen and (max-width: 767px) {
+        padding: 10px 15px;
+      }
+
+      @media screen and (min-width: 768px) {
+      padding-top: 0;
+      padding-bottom: 0;
+      }     
+    }
+  }
+
+

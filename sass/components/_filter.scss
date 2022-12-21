@@ -1,0 +1,47 @@
+.filter {
+
+    @media screen and (max-width: 767px) {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    .filter__item:not(:last-child) {
+        margin-right: 8px;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 15px;
+        }
+}
+
+/* секція фільтров кнопок */
+    &__button {
+        align-items: center;
+        text-align: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: calc(26 / 16);
+        letter-spacing: 0.03em;
+        font-family: inherit;
+        border-radius: 4px;
+        min-width: 73px;
+        min-height: 38px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: none;
+        cursor: pointer;
+        color: var(--color-font-h2-h3-name);
+        background-color: var(--background-color-team);
+        transition: color var(--hover-effect), background-color var(--hover-effect), box-shadow var(--hover-effect);
+    
+        &:hover,
+        &:focus {
+            background-color: var(--button-color-web-second);
+            color: var(--color-font-hero-address);
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+        }
+    }
+}

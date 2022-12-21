@@ -1,0 +1,52 @@
+.address { 
+    margin-top: 20px;
+    margin-bottom: 60px; 
+
+    @media screen and(min-width: 1200px) {
+        margin-bottom: 0;       
+    }
+
+    &__list {
+        font-style: normal;
+        display: flex;
+        flex-direction: column;   
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            align-items: flex-start;      
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 9px;   
+    }
+
+    &__map {
+        color: var(--color-font-hero-address);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: calc(24 / 14);
+        letter-spacing: 0.03em;
+        transition: color var(--hover-effect);
+    
+        &:hover,
+        &:focus { 
+            color: var(--button-color-web-second);
+        }
+    }
+
+/* имеил и тел */
+    &__contact {
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: calc(24 / 14);
+        letter-spacing: 0.03em; 
+        transition: color var(--hover-effect);
+
+        &:hover,
+        &:focus {
+            color: var(--button-color-web-second);
+        }
+    }
+}

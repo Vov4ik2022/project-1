@@ -1,0 +1,60 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--background-color-section1-footer);
+    
+
+
+/* div для двух divov */
+    &__general {
+        display: flex;
+        align-items: baseline;
+               
+        @media screen and(max-width: 767px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        @media screen and (min-width: 1200px) {
+            justify-content: space-between;
+        }      
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        width: 231px;   
+        text-align: center; 
+
+        @media screen and (min-width: 1200px) {
+            text-align: left;
+           
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: column;  
+        padding-bottom: 60px;
+    }
+
+    /* h2 Приєднуйтесь */
+    &__title {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: calc(16 / 14);
+        letter-spacing: 0.03em;
+        margin-bottom: 20px;
+        color: var(--color-font-hero-address); 
+        text-align: center;   
+        
+        @media screen and (min-width: 1200px) {
+            text-align: left;                        
+        }       
+    }
+}

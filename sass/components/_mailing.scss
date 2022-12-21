@@ -1,0 +1,66 @@
+.mailing {
+    display: flex;
+    flex-direction: column;  
+    gap: 20px;
+
+    @media screen and (min-width: 768px) {
+        align-items: center;      
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 12px;      
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: calc(16 / 14);
+        letter-spacing: 0.03em;
+        color: var(--color-font-hero-address);
+
+        @media screen and (min-width: 1200px) {
+            justify-content: flex-start;      
+        }
+    }
+
+    &__form {
+        width: 95vw;
+        max-width: 450px;
+        height: 50px;
+        padding: 15px 16px;
+        outline: 1px solid rgba(255, 255, 255, 0.3);
+        border: 2px;
+        border-radius: 4px;
+        color:var(--color-font-hero-address);
+        background-color: var(--background-color-section1-footer);
+        border: var(--hover-effect);   
+        &__form:focus {
+            border: var(--color-fill-hover);  
+        }
+
+          @media screen and (min-width: 1200px) {
+            width: 358px;
+          }
+
+    }
+}
+
+.mailing-btn__section {
+    @media screen and (max-width: 767px) {    
+        display: flex;
+        justify-content: center;
+    }   
+}
+
+.mailing-btn__icon {
+    position: absolute;
+    top: 13px;
+    right: 28px;  
+}
+

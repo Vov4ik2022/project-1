@@ -1,0 +1,38 @@
+.socials {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 10px;
+
+    &__item {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* цвет иконки соцсети */
+    &__link {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        fill: #AFB1B8;
+        transition: color var(--hover-effect), 
+        background-color var(--hover-effect), 
+        fill var(--hover-effect);
+    
+        &:hover,
+        &:focus {
+            background-color: var(--button-color-web-second);
+            border-radius: 50%;
+            fill: var(--color-fill-white);    
+        }
+    }
+
+    &__link--grey {
+        fill: var(--color-fill-white);
+        background-color: rgba(255,255,255,0.1);   
+    }
+}

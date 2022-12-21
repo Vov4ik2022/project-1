@@ -1,0 +1,51 @@
+.main-nav {
+    @media screen and (max-width: 767px) {      
+        display: none;
+     }
+
+    @media screen and (min-width: 768px) {
+      margin-left: 91px;
+    }
+
+    margin-right: auto; 
+      
+    &__list {    
+        display: flex;
+        
+        align-items: center;
+        gap: 50px;
+    }
+
+    &__link {
+        position: relative; 
+        display: block; 
+        padding-top: 32px; 
+        padding-bottom: 32px;
+        font-weight: 500; 
+        font-size: 14px; 
+        line-height: calc(16 / 14); 
+        letter-spacing: 0.02em; 
+        color: var(--color-font-h2-h3-name);
+        transition: color var(--hover-effect);
+    
+        &:hover,
+        &:focus {
+            color: var(--button-color-web-second);      
+        }
+        
+        // === Рисочка ===
+        &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -1%;
+        transform: translateX(-50%);    
+        }    
+    }
+}  
+
+
+    
+    
+
+    

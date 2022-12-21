@@ -1,0 +1,80 @@
+/* цвет фона общий*/
+.team {   
+    background-color: var(--background-color-team);
+    @extend %section;
+
+/* заглавие */
+    &__title {
+        text-align: center;
+        font-size: 28px;
+        line-height: calc(33 / 28);
+        letter-spacing: 0.03em;   
+        margin-bottom: 30px;
+        color: var(--color-font-h2-h3-name);
+
+        @media screen and (min-width: 1200px) {
+        font-size: 36px;
+        margin-bottom: 50px;
+        line-height: calc(42 / 36);
+        }
+    }
+}
+
+.team-list {
+    display: flex; 
+    align-items: center;
+    gap: 30px;
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;  
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-wrap: wrap;  
+    }
+
+/* цвет фона картинки */
+    &__item {
+
+        @media screen and (max-width: 767px) {        
+            width: 450px;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 354px;      
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 270px;       
+        }
+ 
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+        background-color: var(--background-color-weite);       
+    }
+}
+
+.team-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+/* имя h3 */
+    &__title {
+        text-align: center;
+        font-weight: 500px;
+        font-size: 16px;
+        line-height: calc(19 / 16);
+        letter-spacing: 0.03em;
+        margin-bottom: 10px;
+        color: var(--color-font-h2-h3-name);
+    }
+
+    /* должность */
+    &__text {
+        text-align: center;
+        font-size: 16px;
+        line-height: calc(19 / 16);
+        letter-spacing: 0.03em;
+        margin-bottom: 16px; 
+        color: var(--color-font-contact-p);  
+    }
+}
