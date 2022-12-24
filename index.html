@@ -36,34 +36,70 @@
           </svg>
         </button>
 
-      
+       <!-- оформление заголовка и ЛИ-шек -->
         <strong class="buynow-title">Buy now</strong>
 
         <ul class="buynow-menu">
           <li class="buynow-menu__list list">
-            <input class="checkbox__form" type="checkbox" id="ice_cream" />
-            <label class="checkbox__title" for="ice_cream">  
-              <img src="./images/fff.jpg" alt="">
-            </label>
-            <p class="checkbox__text"> ice cream </p>
+            <div class="buynow__item">
+              <p class="buynow__title"> ice cream </p>
+            </div>
+            <div>
+              
+              <input class="checkbox__form" type="checkbox" id="ice_cream" />
+              <label class="checkbox__title" for="ice_cream">
+              <p class="buynow__ellips"></p>
+              </label>
+            </div>
+          </li>
 
+
+
+          <li class="buynow-menu__list list">
+            <div class="buynow__item">
+              <p class="buynow__title"> ice cream </p>
+            </div>
+            <div>
+              <p class="buynow__ellips"></p>
+              <p class="buynow__input"></p>
+            </div>
+          </li>
+
+          <li class="buynow-menu__list list">
+            <div class="buynow__item">
+
+            </div>
+          </li>
+          
+
+
+        </ul>
+       
+        <!-- <ul class="buynow-menu">
+          <li class="buynow-menu__list list">
+            <input class="checkbox__form" type="checkbox" id="ice_cream" />
+            <label class="checkbox__title" for="ice_cream">
+              <p class="checkbox__text"> ice cream </p>
+            </label>
+            
           </li>
             
           <li class="buynow-menu__list list">
             <input class="checkbox__form" type="checkbox" id="ice_coffee" />
-            <label class="checkbox__title" for="ice_coffee"> 
-               </label>
-            <p class="checkbox__text"> ice coffee </p>
+            <label class="checkbox__title" for="ice_coffee">
+              <p class="checkbox__text"> ice coffee </p>
+            </label>
+            
           </li>
 
           <li class="buynow-menu__list list">
             <input class="checkbox__form" type="checkbox" id="milkshake" />
-            <label class="checkbox__title" for="milkshake"> 
-              
+            <label class="checkbox__title" for="milkshake">
+              <p class="checkbox__text"> milkshake </p>
             </label>
-            <p class="checkbox__text"> milkshake </p>
+            
           </li>
-        </ul>
+        </ul> -->
 
         <!-- Инпуты и кнопка -->
         <form class="modal-form" name="modal_form">
@@ -80,6 +116,7 @@
 
             <label class="modal-form__label" for="user_message"></label>
             <textarea class="modal-form__message" name="user_message" id="user_message" rows="6" placeholder="Comment"></textarea>
+
             <button class="modal__button button" type="submit">Submit</button>
           </div> 
         </form>
