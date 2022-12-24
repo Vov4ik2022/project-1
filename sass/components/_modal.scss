@@ -78,46 +78,73 @@
 
 /* Оформление модального окна */
 
-.buynow__title {
-font-family: 'Seymour One';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: calc(28 / 20);
-color: #131313;
+.buynow-title {
+  display: block;
+  text-align: center;
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: calc(28 / 20);
+  color: #131313;
+  margin-bottom: 40px;
 }
 
 .buynow-menu {
-  
+  display: flex;
+  padding: 0;
+
 }
 
 .buynow-menu__list {
+  outline: 2px solid red;
   width: 132px;
-  height: 135px;
-  outline: 2px solid #96AF8C;
-  border-radius: 10px;
+  height: 198px; 
+}
+
+.buynow-menu__list:not(:last-child ){
+    margin-right: 32px; 
+}
+
+.checkbox__form {
+  display: none;
+}
+
+.checkbox__title::before {
+  content: '';
+  display: inline-block;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.checkbox__form:checked + .checkbox__title::before {
+  background-color: red;
+}
+
+.checkbox__text {
+  text-align: center;
+  background-color: aqua;
 }
 
 .buynow-menu__item {
-
+ 
 }
 
-.buynow-menu__title {
-  text-align: center;
-  
+.buynow-menu__text {
+  // text-align: center;
   font-family: 'Montserrat';
   font-style: normal;
   // font-weight: 700;
   font-size: 16px;
   line-height: calc(20 / 16);
-  
   letter-spacing: 0.04em;
   text-transform: uppercase;
-
   color: #131313;
 }
 
-
+// ================================================
 
 
 
@@ -133,79 +160,100 @@ color: #131313;
 //   margin-bottom: 12px;
 // }
 
-// .modal-form {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-// .modal-form__group {
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-//   margin-bottom: 20px;
-// }
+.modal-form__group {
+  display: flex;
+  flex-direction: column;
+  
+  width: 368px;
+  margin-bottom: 32px;
 
-// .modal-form__label {
-//   font-weight: 400;
-//   font-size: 12px;
-//   line-height: calc(14 / 12);
-//   letter-spacing: 0.01em;
-//   margin-bottom: 4px;
-//   color: var(--color-font-contact-p);
-// }
+  outline: 2px solid blue;
+}
 
-// .modal-form__wrapper {
-//   position: relative;
-//   display: inline-flex;
-//   flex-direction: column;
-//   margin-bottom: 10px;
-// }
+.modal-form__label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  // margin-bottom: 4px;
+  color: var(--color-font-contact-p);
+}
 
-// .modal-form__field {
-//   font-size: 12px;
-//   height: 42px;
-//   left: 576px;
-//   top: 314px;
-//   border: 1px solid #84A178;
-//   border-radius: 10px;
-//   padding: 11px 16px;
-//   cursor: pointer;
-//   outline: none;
-//   transition: border var(--hover-effect);
-// }
+.modal-form__wrapper {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  
+}
 
-// .modal-form__icon {
-//   position: absolute;
-//   top: 11px;
-//   left: 12px;
-//   fill: var(--color-font-h2-h3-name);
-//   transition: fill var(--hover-effect);
-// }
+.modal-form__wrapper:not(:last-child ) {
+    margin-bottom: 16px; 
+}
 
-// .modal-form__field:focus + .modal-form__icon {
-//   fill: var(--color-fill-hover);
-// }
+.modal-form__field {
+  font-size: 12px;
+  height: 42px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  // left: 576px;
+  // top: 314px;
+  
+  border: 1px solid #84A178;
+  border-radius: 10px;
+  padding: 11px 16px;
+  cursor: pointer;
+  outline: none;
+  transition: border var(--hover-effect);
+}
 
-// .modal-form__field:focus {
-//   border: 1px solid var(--color-fill-hover);
-// }
+.modal-form__icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  fill: var(--color-font-h2-h3-name);
+  transition: fill var(--hover-effect);
+}
 
-// .modal-form__message {
-//   resize: none;
-//   font-weight: 400;
-//   font-size: 12px;
-//   line-height: calc(14 / 12);
-//   letter-spacing: 0.01em;
-//   height: 84px;
-//   padding: 11px 16px;
-//   margin-bottom: 10px;
-//   cursor: pointer;
-//   outline: none;
-//   border: 1px solid #84A178;
-//   border-radius: 10px;
-//   // transition: border var(--hover-effect);
-// }
+.modal-form__field:focus + .modal-form__icon {
+  fill: var(--color-fill-hover);
+}
+
+.modal-form__field:focus {
+  border: 1px solid var(--color-fill-hover);
+}
+
+.modal-form__message {
+  resize: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  height: 84px;
+  padding: 11px 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #84A178;
+  border-radius: 10px;
+  // transition: border var(--hover-effect);
+}
+
+.modal__button {
+  width: 121px;
+  height: 42px;
+  border-radius: 10px;
+  background-color:#F8D24E;
+  justify-content: center;
+}
 
 // .modal-form__message:focus {
 //   border: 1px solid var(--color-fill-hover);
@@ -252,10 +300,7 @@ color: #131313;
 //   color: var(--button-color-web-second);
 // }
 
-// .modal__button {
-//   width: 200px;
-//   height: 50px;
-// }
+
 
 
 
