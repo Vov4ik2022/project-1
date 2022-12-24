@@ -1230,7 +1230,7 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  min-height: 644px;
+  height: 644px;
   padding: 32px 54px;
   border-radius: 10px;
   outline: 2px solid #F8D24E;
@@ -1291,13 +1291,6 @@ img {
   fill: #131313;
 }
 
-.modal-button__icon:hover,
-.modal-button__icon:focus {
-  fill: var(--color-fill-hover);
-  -webkit-transition: fill var(--hover-effect);
-  transition: fill var(--hover-effect);
-}
-
 /* Оформление модального окна */
 .buynow-title {
   display: block;
@@ -1316,10 +1309,12 @@ img {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 .buynow-menu__list {
-  outline: 2px solid red;
+  outline: 2px solid #000000;
   width: 132px;
   height: 198px;
 }
@@ -1348,6 +1343,15 @@ img {
 .checkbox__text {
   text-align: center;
   background-color: aqua;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  height: 135px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #131313;
 }
 
 .buynow-menu__text {
@@ -1381,9 +1385,11 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 368px;
   margin-bottom: 32px;
-  outline: 2px solid blue;
 }
 
 .modal-form__label {
@@ -1417,43 +1423,28 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
+  width: 368px;
   border: 1px solid #84A178;
   border-radius: 10px;
   padding: 11px 16px;
   cursor: pointer;
   outline: none;
+  background-color: rgba(248, 210, 78, 0.1);
   -webkit-transition: border var(--hover-effect);
   transition: border var(--hover-effect);
 }
 
-.modal-form__icon {
-  position: absolute;
-  top: 11px;
-  left: 12px;
-  fill: var(--color-font-h2-h3-name);
-  -webkit-transition: fill var(--hover-effect);
-  transition: fill var(--hover-effect);
-}
-
-.modal-form__field:focus + .modal-form__icon {
-  fill: var(--color-fill-hover);
-}
-
-.modal-form__field:focus {
-  border: 1px solid var(--color-fill-hover);
-}
-
 .modal-form__message {
-  resize: none;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666666667;
   letter-spacing: 0.01em;
+  width: 368px;
   height: 84px;
   padding: 11px 16px;
-  margin-bottom: 10px;
+  margin-bottom: 32px;
   cursor: pointer;
-  outline: none;
+  background-color: rgba(248, 210, 78, 0.1);
   border: 1px solid #84A178;
   border-radius: 10px;
 }
@@ -1462,10 +1453,8 @@ img {
   width: 121px;
   height: 42px;
   border-radius: 10px;
+  color: #131313;
   background-color: #F8D24E;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .menu {
