@@ -220,8 +220,8 @@ img {
   height: 644px;
   padding: 32px 54px;
   border-radius: 10px;
-  outline: 2px solid #F8D24E;
-  background-color: #FCFCFC;
+  outline: 2px solid #f8d24e;
+  background-color: #fcfcfc;
 }
 @media screen and (max-width: 479px) {
   .buynow-modal {
@@ -279,7 +279,7 @@ img {
 }
 
 /* Оформление модального окна */
-.buynow-title {
+.buynow__title {
   display: block;
   text-align: center;
   font-family: "Seymour One";
@@ -291,69 +291,52 @@ img {
   margin-bottom: 40px;
 }
 
-.buynow-menu {
+.buynow__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.buynow-menu__list {
-  outline: 1px solid black;
-  width: 132px;
-  height: 198px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 40px;
 }
 
-.buynow-menu__list:not(:last-child) {
+.buynow__item {
+  position: relative;
+  width: 132px;
+  outline: 1px solid red;
+}
+
+.buynow__item:not(:last-child) {
   margin-right: 32px;
 }
 
-.buynow__item {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: absolute;
+.buynow__checkbox {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.buynow__label {
+  display: inline-block;
+}
+
+.buynow__label::before {
+  content: "";
   width: 132px;
-  height: 135px;
-  left: 54px;
-  top: 163px;
-  border: 2px solid #96AF8C;
-  -webkit-filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
-          filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
-  border-radius: 15px;
+  height: 132px;
+}
+
+.buynow__checkbox:checked + .buynow__label::before {
+  content: "";
+  background-color: red;
 }
 
 .buynow__text {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
   text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #131313;
-}
-
-.buynow__ellips {
-  position: absolute;
-  width: 132px;
-  height: 132px;
-  left: 54px;
-  top: 107px;
-  border-radius: 50%;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(156, 190, 143, 0.7)), to(rgba(156, 190, 143, 0.7))), #D9D9D9;
-  background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
-  -webkit-box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-          box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-}
-
-.checkbox__form {
-  width: 132px;
-  height: 132px;
-  background-image: url(/images/cream.jpg);
-  border-radius: 98px;
+  padding: 95px 16px 20px;
+  outline: 5px solid #f8d24e;
 }
 
 .modal-form {
@@ -416,7 +399,7 @@ img {
   font-size: 14px;
   line-height: 140%;
   width: 368px;
-  border: 1px solid #84A178;
+  border: 1px solid #84a178;
   border-radius: 10px;
   padding: 11px 16px;
   cursor: pointer;
@@ -435,7 +418,7 @@ img {
   margin-bottom: 32px;
   cursor: pointer;
   background-color: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84A178;
+  border: 1px solid #84a178;
   border-radius: 10px;
 }
 
@@ -444,7 +427,7 @@ img {
   height: 42px;
   border-radius: 10px;
   color: #131313;
-  background-color: #F8D24E;
+  background-color: #f8d24e;
 }
 
 .menu {
