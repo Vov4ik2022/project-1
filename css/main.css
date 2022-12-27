@@ -217,7 +217,6 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 644px;
   padding: 32px 54px;
   border-radius: 10px;
   outline: 2px solid #f8d24e;
@@ -234,7 +233,6 @@ img {
 @media screen and (min-width: 480px) {
   .buynow-modal {
     width: 568px;
-    min-height: 644px;
     top: 12%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -291,52 +289,48 @@ img {
   margin-bottom: 40px;
 }
 
-.buynow__list {
+.buynow-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-bottom: 40px;
 }
 
-.buynow__item {
-  position: relative;
-  width: 132px;
-  outline: 1px solid red;
+.buynow-menu__text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding-top: 19px;
 }
 
-.buynow__item:not(:last-child) {
+.buynow-menu__list {
+  height: 198px;
+  outline: 1px solid blue;
+}
+
+.buynow-menu__list:not(:last-child) {
   margin-right: 32px;
 }
 
-.buynow__checkbox {
-  display: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.buynow__label {
-  display: inline-block;
-}
-
-.buynow__label::before {
-  content: "";
+.buynow-menu__form {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
   width: 132px;
   height: 132px;
+  background-image: url(/images/cream.jpg);
+  border-radius: 98px;
 }
-
-.buynow__checkbox:checked + .buynow__label::before {
-  content: "";
-  background-color: red;
-}
-
-.buynow__text {
-  text-align: center;
-  padding: 95px 16px 20px;
-  outline: 5px solid #f8d24e;
+@media screen and (mim-width: 767px) {
+  .buynow-menu__form {
+    width: 368px;
+  }
 }
 
 .modal-form {
@@ -364,7 +358,6 @@ img {
       -ms-flex-align: center;
           align-items: center;
   width: 368px;
-  margin-bottom: 32px;
 }
 
 .modal-form__label {
@@ -392,13 +385,15 @@ img {
 
 .modal-form__field {
   font-size: 12px;
+  width: 368px;
   height: 42px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  width: 368px;
+  margin-left: auto;
+  margin-right: auto;
   border: 1px solid #84a178;
   border-radius: 10px;
   padding: 11px 16px;
@@ -417,9 +412,18 @@ img {
   padding: 11px 16px;
   margin-bottom: 32px;
   cursor: pointer;
+  resize: none;
   background-color: rgba(248, 210, 78, 0.1);
   border: 1px solid #84a178;
   border-radius: 10px;
+}
+
+.modal-form__message:focus {
+  border: 1px solid blue;
+}
+
+.modal-form__message:checked {
+  border: 1px solid red;
 }
 
 .modal__button {

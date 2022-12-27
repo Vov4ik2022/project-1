@@ -36,81 +36,56 @@
           </svg>
         </button>
 
-       <!-- оформление заголовка и ЛИ-шек -->
-      <section class="buynow">
+        <!-- оформление заголовка и ЛИ-шек -->
+        <section class="buynow">
 
-        <strong class="buynow__title">Buy now</strong>
+          <strong class="buynow__title">Buy now</strong>
 
-        <ul class="buynow__list list">
-          <li class="buynow__item">
-            
-            <input class="buynow__checkbox" type="checkbox" name="cold_menu" id="ice_cream">
-            <label class="buynow__label" for="ice_cream"> 
-              <p class="buynow__text"> ice cream </p>
-            </label>        
-            
-            
-            
+          <ul class="buynow-menu">
+            <li class="buynow-menu__list list">
+              <input class="buynow-menu__form" type="checkbox" id="ice_cream" />
+              <label for="ice_cream">
+                <p class="buynow-menu__text"> ice cream </p>
+              </label>
+              
+            </li>
+              
+            <li class="buynow-menu__list list">
+              <input class="buynow-menu__form" type="checkbox" id="ice_coffee" />
+              <label for="ice_coffee">
+                <p class="buynow-menu__text"> ice coffee </p>
+              </label>
+            </li>
 
-          </li>
+            <li class="buynow-menu__list list">
+              <input class="buynow-menu__form" type="checkbox" id="milkshake" />
+              <label for="milkshake">
+                <p class="buynow-menu__text"> milkshake </p>
+              </label>
+            </li>
+          </ul>
+          
 
-          <li class="buynow__item">
+          <!-- Инпуты и кнопка -->
+          <form class="modal-form" name="modal_form">
+            <div class="modal-form__group" role="group">
+              <label class="modal-form__label" for="user_name"></label>
+              <div class="modal-form__wrapper">
+                <input class="modal-form__field" type="name" id="user_name" placeholder="Name" pattern="[a-zA-Z]" required/> 
+              </div>
 
-          </li>
+              <label class="modal-form__label" for="user_phon"></label>
+              <div class="modal-form__wrapper">
+                <input class="modal-form__field" type="tel" name="user_phone" id="user_phon" placeholder="Phone" pattern="[0-9]" required/>
+              </div>
 
-          <li class="buynow__item">
+              <label class="modal-form__label" for="user_message"></label>
+              <textarea class="modal-form__message" name="user_message" id="user_message" rows="6" placeholder="Comment"></textarea>
 
-          </li>
-
-        </ul>
-        
-      </section> 
-       
-        <!-- <ul class="buynow-menu">
-          <li class="buynow-menu__list list">
-            <input class="checkbox__form" type="checkbox" id="ice_cream" />
-            <label class="checkbox__title" for="ice_cream">
-              <p class="checkbox__text"> ice cream </p>
-            </label>
-            
-          </li>
-            
-          <li class="buynow-menu__list list">
-            <input class="checkbox__form" type="checkbox" id="ice_coffee" />
-            <label class="checkbox__title" for="ice_coffee">
-              <p class="checkbox__text"> ice coffee </p>
-            </label>
-            
-          </li>
-
-          <li class="buynow-menu__list list">
-            <input class="checkbox__form" type="checkbox" id="milkshake" />
-            <label class="checkbox__title" for="milkshake">
-              <p class="checkbox__text"> milkshake </p>
-            </label>
-            
-          </li>
-        </ul> -->
-
-        <!-- Инпуты и кнопка -->
-        <form class="modal-form" name="modal_form">
-          <div class="modal-form__group" role="group">
-            <label class="modal-form__label" for="user_name"></label>
-            <div class="modal-form__wrapper">
-              <input class="modal-form__field" type="name" id="user_name" placeholder="Name"/> 
-            </div>
-
-            <label class="modal-form__label" for="user_phon"></label>
-            <div class="modal-form__wrapper">
-              <input class="modal-form__field" type="tel" name="user_phone" id="user_phon" placeholder="Phone"/>
-            </div>
-
-            <label class="modal-form__label" for="user_message"></label>
-            <textarea class="modal-form__message" name="user_message" id="user_message" rows="6" placeholder="Comment"></textarea>
-
-            <button class="modal__button button" type="submit">Submit</button>
-          </div> 
-        </form>
+              <button class="modal__button button" type="submit">Submit</button>
+            </div> 
+          </form>
+        </section> 
       </div>
       
    
