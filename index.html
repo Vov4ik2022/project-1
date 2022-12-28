@@ -24,69 +24,87 @@
  
 
 
-    <!-- Модальное окно -->
+    <!-- Модальное окно buynow -->
 
     <!-- <div class="backdrop is-hidden" data-modal> -->
 
-      <!-- Крестик - закрыть модальное окно -->
       <div class="buynow-modal">
+       <div class="modal-buynow">
         <button class="modal-button__close" data-modal-close>
           <svg class="modal-button__icon" width="24" height="24">
             <use href="./images/icons.svg#modal-close"></use>
           </svg>
         </button>
-
-        <!-- оформление заголовка и ЛИ-шек -->
-        <section class="buynow">
-
-          <strong class="buynow__title">Buy now</strong>
-
-          <ul class="buynow-menu">
-            <li class="buynow-menu__list list">
-              <input class="buynow-menu__form" type="checkbox" id="ice_cream" />
-              <label for="ice_cream">
-                <p class="buynow-menu__text"> ice cream </p>
-              </label>
-              
-            </li>
-              
-            <li class="buynow-menu__list list">
-              <input class="buynow-menu__form" type="checkbox" id="ice_coffee" />
-              <label for="ice_coffee">
-                <p class="buynow-menu__text"> ice coffee </p>
-              </label>
-            </li>
-
-            <li class="buynow-menu__list list">
-              <input class="buynow-menu__form" type="checkbox" id="milkshake" />
-              <label for="milkshake">
-                <p class="buynow-menu__text"> milkshake </p>
-              </label>
-            </li>
-          </ul>
+        <form class="modal-buynow__form">
+        <p class="form-buy__title">Buy now</p>
+        <div class="buynow__card-box">
+          <div class="buynow__card-wrapper">
+            <input
+              name="ice-cream"
+              class="buynow__card-input"
+              type="checkbox"
+            />
+            <div class="buynow__box-first buynow__box-title">
+              <span class="buynow__card-title">ICE CREAM</span>
+            </div>
+          </div>
+          <div class="buynow__card-wrapper">
+            <input
+              name="ice coffee"
+              class="buynow__card-input"
+              type="checkbox"
+            />
+            <div class="buynow__box-second buynow__box-title">
+              <span class="buynow__card-title">ICE COFFE</span>
+            </div>
+          </div>
+          <div class="buynow__card-wrapper">
+            <input
+              name="milkshake"
+              class="buynow__card-input"
+              type="checkbox"
+            />
+            <div class="buynow__box-third buynow__box-title">
+              <span class="buynow__card-title">MILKSHAKE</span>
+            </div>
+          </div>
+        </div>
           
 
           <!-- Инпуты и кнопка -->
-          <form class="modal-form" name="modal_form">
-            <div class="modal-form__group" role="group">
-              <label class="modal-form__label" for="user_name"></label>
-              <div class="modal-form__wrapper">
-                <input class="modal-form__field" type="name" id="user_name" placeholder="Name" pattern="[a-zA-Z]" required/> 
-              </div>
-
-              <label class="modal-form__label" for="user_phon"></label>
-              <div class="modal-form__wrapper">
-                <input class="modal-form__field" type="tel" name="user_phone" id="user_phon" placeholder="Phone" pattern="[0-9]" required/>
-              </div>
-
-              <label class="modal-form__label" for="user_message"></label>
-              <textarea class="modal-form__message" name="user_message" id="user_message" rows="6" placeholder="Comment"></textarea>
-
-              <button class="modal__button button" type="submit">Submit</button>
-            </div> 
-          </form>
-        </section> 
-      </div>
+          <label class="modal-buynow__form-field">
+            <span class="modal-buynow__form--input-wrapper">
+              <input
+                type="text"
+                class="modal-buynow__form--input"
+                required=""
+                name="user_name"
+                placeholder="Name"
+              />
+            </span>
+          </label>
+          <label class="modal-buynow__form-field">
+            <span class="modal-buynow__form--input-wrapper">
+              <input
+                type="tel"
+                class="modal-buynow__form--input"
+                required=""
+                name="user_phone"
+                placeholder="Phone"
+              />
+            </span>
+          </label>
+          <label class="modal-buynow__form--field-message modal-buynow__form-field">
+            <textarea
+              name="user_message"
+              class="modal-buynow__form--message"
+              placeholder="Comment"
+            ></textarea>
+          </label>
+        <button type="submit" class="modal-buynow__form--button">Submit</button>
+      
+      </form>
+    </div>
       
    
     <script src="./js/modal.js"></script>
